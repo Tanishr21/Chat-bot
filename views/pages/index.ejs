@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css" />
+    <style>
+        .box-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-option {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><a>Chat-Bot</a></li>
+        </ul>
+    </div>
+
+    <div class="container mt-5">
+        <h3 class="text-center mb-4">CHAT-BOT</h3>
+        <div class="media mb-4" style="background-color: whitesmoke;">
+            <img src="./image/chatbot.jpg" class="rounded-circle img-thumbnail" width="65px" alt="Chatbot Image">
+            <div class="media-body">
+                <h5 class="mt-3">ChatBot</h5>
+                <span style="color: green;">Online</span>
+            </div>
+        </div>
+
+        <div id="chatContainer" class="container border overflow-auto" style="height:300px">
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <div id="question1" class="card">
+                            <div class="card-body box-container" onclick="selectQuestion(1)">
+                                <h5 class="card-title">1. What car brand do you want to buy?</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div id="question2" class="card">
+                            <div class="card-body box-container" onclick="selectQuestion(2)">
+                                <h5 class="card-title">2. Want to know about the return policy?</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <div id="question3" class="card">
+                            <div class="card-body box-container" onclick="selectQuestion(3)">
+                                <h5 class="card-title">3. Want to book a test drive ?</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div id="question4" class="card">
+                            <div class="card-body box-container" onclick="selectQuestion(4)">
+                                <h5 class="card-title">4. What are the payment options?</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="paymentOptions" class="hidden mt-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="payment-option">Bank Financing</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="payment-option">Online Payment Platforms:</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="payment-option">Cash</div>
+                    </div>
+                </div>
+                <!-- Add more payment options as needed -->
+            </div>
+        </div>
+
+        <div class="input-group mt-3">
+            <input type="text" id="phoneNumber" class="form-control hidden" placeholder="Phone Number">
+            <input type="text" id="email" class="form-control hidden" placeholder="Email">
+            <input type="text" id="name" class="form-control hidden" placeholder="Name">
+            <button id="submitDetailsBtn" class="btn btn-primary hidden">Submit Details</button>
+        </div>
+
+        <div class="input-group mt-3">
+            <input id="textbox" type="text" class="form-control" />
+            <div class="input-group-append">
+                <button id="sendbtn" type="button" class="btn btn-primary">Send</button>
+            </div>
+        </div>
+        <div id="confirmationMessage" class="text-center mt-3" style="display: none;">
+            Our team will get back to you soon.
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
